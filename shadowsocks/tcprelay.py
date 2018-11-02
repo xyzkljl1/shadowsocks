@@ -423,6 +423,7 @@ class TCPRelayHandler(object):
         ip = result[1]
         self._stage = STAGE_CONNECTING
         remote_addr = ip
+        logging.info('Res '+result[0]+' to '+ip)
         if self._is_local:
             remote_port = self._chosen_server[1]
         else:
